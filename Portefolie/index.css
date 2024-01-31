@@ -1,0 +1,325 @@
+/*body*/
+  body {
+    margin: 0;
+    overflow: auto;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: rgb(196, 189, 189);
+}
+
+
+
+/*nav*/
+  nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    background-color: rgb(64, 58, 58);
+  }
+  nav ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+  }
+  nav ul a{
+    color: #f8f9fa;
+    text-decoration: none;
+    width: 5em;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2em;
+  }
+  nav ul a:hover{
+    background-color: rgba(112, 106, 106, 0.543);
+    font-weight: bold;
+  }
+  nav ul img{
+    width: 5.5em;
+    height: 5.5em;
+    padding: 0.3em;
+    padding-right: 1em;
+  }
+  nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+
+
+/*parti 1*/
+  #frontPage{
+    background-color: rgb(38, 36, 36);
+    color: rgb(217, 212, 212);
+    align-items: center;
+  }
+  #frontPage {
+    display: flex;
+    background-color: rgb(38, 36, 36);
+    color: rgb(217, 212, 212);
+    height: 53vw;
+  }
+  #textContainer {
+    flex: 1;
+    padding: 30px;
+    text-align: left;
+  }
+  #textContainer #helloText{
+    font-size: 2em;
+  }
+  #textContainer #nameText{
+    font-size: 4.5em;
+  }
+  #frontPage img {
+    max-width: 100%;
+    height: 100%;
+    align-self: flex-start;
+  }
+
+
+  #quotation{
+    background-color: rgb(196, 189, 189);
+    padding: 13em;     
+    position: relative;
+  }
+  #quotation p{
+      width: 20em;
+    position: absolute; /* Posisjoner teksten absolutt i forhold til #quotation */
+    top: 50%; /* Plasser teksten 50% fra toppen av #quotation */
+    left: 25%; /* Plasser teksten 50% fra venstre av #quotation */
+    transform: translate(-50%, -50%); /* Sentrer teksten både horisontalt og vertikalt */
+    color: white; /* For å gjøre teksten synlig over bildet */
+    background-color: rgb(104, 97, 97);;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+
+/*parti 2*/
+  #mainPart{
+    background-color: rgb(230, 226, 226);
+    border-top-left-radius: 8em;
+    border-top-right-radius: 8em;
+  }
+  main{
+    margin-left: 23%;
+    margin-right: 23%;
+  }
+
+  .hobbies{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 4em;
+    background-color: rgb(230, 226, 226);
+    text-align: center;
+    padding-top: 8em;
+    line-height: 1.3;
+  
+    grid-template-areas: 
+        "titl titl titl"
+        "food acti movi"
+        "fooT actT movT"
+        ;
+  }
+  #title{           grid-area: titl;    background-color: rgb(230, 226, 226);   padding-top: 2em;   padding-bottom: 5em;}
+  #food{            grid-area: food;    height: 10em;}
+  #foodText{        grid-area: fooT;}
+  #activities{      grid-area: acti;    height: 10em;}
+  #activitiesText{  grid-area: actT;}
+  #movies{          grid-area: movi;    height: 10em;}
+  #moviesText{      grid-area: movT;}
+  #food img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+  }
+  #activities img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+  }
+  #movies img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+  }
+  .hobbies a{
+    color: black;
+  }
+  .hobbies a:hover{
+    color: rgb(87, 28, 142);
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+
+  .aboutMe{   
+    display: grid;
+    gap: 15px;
+    background-color: rgb(230, 226, 226);
+    margin-top: 8em;
+    padding-bottom: 15em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+   
+  
+    grid-template-areas: 
+        "abo1 jpg1"
+        "jpg2 abo2"
+        ;
+  }
+  #aboutMe1{    grid-area: abo1;   background-color: rgb(230, 226, 226);    height: 23vw;   line-height: 1.5;   font-size: 1.1em;}
+  #aboutMe2{    grid-area: abo2;   background-color: rgb(230, 226, 226);    height: 23vw;   line-height: 1.5;   font-size: 1.1em;}
+  #aboutMejpg1{ grid-area: jpg1;   width: 19em;    height: 25em;   border-radius: 1em;     object-fit: cover;      overflow: hidden;}
+  #aboutMejpg2{ grid-area: jpg2;   width: 19em;    height: 25em;   border-radius: 1em;     object-fit: cover;      overflow: hidden;}
+  #aboutMejpg1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #aboutMejpg2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/*footer*/
+  footer{
+    background-color: rgb(64, 58, 58);
+    height: 15vw;
+    padding-top: 2em;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  footer #kontaktinfo{
+    font-size: 1.5em;
+  }
+  footer div{
+    line-height: 1.7;
+    font-size: 1.2em;
+}
+
+
+
+
+/*telefonversjon*/
+  @media(orientation: portrait){
+
+   body{
+      max-width: 100%;
+    }
+
+    nav{
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      z-index: 1;
+      background-color: rgb(64, 58, 58);
+    }
+    nav ul a{
+      width: 5em;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1em;
+    }
+    nav ul img{
+      width: 4em;
+      height: 4em;
+      padding: 0.2em;
+    }
+
+
+    #frontPage{
+      display: grid;
+      align-items: center;
+      grid-template-areas: 
+      "froT"
+      "froI"
+      ;
+    }
+    #textContainer {grid-area: froT; padding: 30px;}
+    #textContainer #helloText{font-size: 0.9em;}
+    #textContainer #nameText{font-size: 1.5em;}
+    #frontPage img {grid-area: froI;}
+
+
+
+    #quotation{background-color: rgb(196, 189, 189);;}
+    #quotation p{
+      height: 6.5em;
+      width: 35%;
+      position: absolute; /* Posisjoner teksten absolutt i forhold til #quotation */
+      top: 50%; /* Plasser teksten 50% fra toppen av #quotation */
+      left: 20%; /* Plasser teksten 50% fra venstre av #quotation */
+      transform: translate(-50%, -50%); /* Sentrer teksten både horisontalt og vertikalt */
+      color: white; /* For å gjøre teksten synlig over bildet */
+      padding: 1em;
+      margin-left: 3em;
+    }
+
+    main{
+      border-top-left-radius: 0em;
+      border-top-right-radius: 0em;
+    }
+
+
+    .hobbies{
+      background-color: rgb(230, 226, 226);
+      text-align: center;
+      padding-top: 8em;
+      padding-bottom: 1em;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, 1fr);
+  
+      grid-template-areas: 
+        "titl"
+        "food"
+        "fooT"
+        "acti" 
+        "actT"
+        "movi"
+        "movT"
+        ;
+    } 
+    #title{           padding-top: 2em;   padding-bottom: 5em;}
+    #food{            height: 10em;   border-radius: 1em;}
+    #foodText{        grid-area: fooT;}
+    #activities{      height: 10em;   border-radius: 1em;}
+    #activitiesText{  grid-area: actT;}
+    #movies{          height: 10em;   border-radius: 1em;}
+    #moviesText{      grid-area: movT;}
+
+
+    .aboutMe{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 3fr, 2fr, 3fr, 2fr;
+
+      grid-template-areas: 
+        "jpg1"
+        "abo1"
+        "jpg2"
+        "abo2"
+        ;
+    }
+    #aboutMe1{    width: 15em;    height: 20em;  overflow: auto;}
+    #aboutMe2{    width: 15em;    height: 20em;  overflow: auto;}
+    #aboutMejpg1{ width: 15em;    height: 20em;}
+    #aboutMejpg2{ width: 15em;    height: 20em;}
+
+    footer{
+      height: 50vw;
+    }
+    }

@@ -1,0 +1,154 @@
+/*body*/
+body {
+    margin: 0;
+    overflow: auto;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: rgb(230, 226, 226);
+}
+
+
+
+/*nav*/
+  nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    background-color: rgb(64, 58, 58);
+  }
+  nav ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+  }
+  nav ul a{
+    color: #f8f9fa;
+    text-decoration: none;
+    width: 5em;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2em;
+  }
+  nav ul a:hover{
+    background-color: rgba(112, 106, 106, 0.543);
+    font-weight: bold;
+  }
+  nav ul img{
+    width: 5.5em;
+    height: 5.5em;
+    padding: 0.3em;
+    padding-right: 1em;
+  }
+  nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+
+/*parti 2*/
+  .aboutMe{   
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 8em;
+    margin-bottom: 10em;
+   
+  
+    grid-template-areas: 
+        "abo1 jpg1"
+        "jpg2 abo2"
+        ;
+  }
+  #aboutMe1{    grid-area: abo1;   height: 23vw;   line-height: 1.5;   font-size: 1.1em;}
+  #aboutMe2{    grid-area: abo2;   height: 23vw;   line-height: 1.5;   font-size: 1.1em;}
+  #aboutMejpg1{ grid-area: jpg1;   width: 19em;    height: 25em;   border-radius: 1em;     object-fit: cover;      overflow: hidden;}
+  #aboutMejpg2{ grid-area: jpg2;   width: 19em;    height: 25em;   border-radius: 1em;     object-fit: cover;      overflow: hidden;}
+  #aboutMejpg1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #aboutMejpg2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/*footer*/
+  footer{
+    background-color: rgb(64, 58, 58);
+    height: 15vw;
+    padding-top: 2em;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  footer #kontaktinfo{
+    font-size: 1.5em;
+  }
+  footer div{
+    line-height: 1.7;
+    font-size: 1.2em;
+}
+
+
+
+
+/*telefonversjon*/
+  @media(orientation: portrait){
+
+   body{
+      max-width: 100%;
+    }
+
+    nav{
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      z-index: 1;
+      background-color: rgb(64, 58, 58);
+    }
+    nav ul a{
+      width: 5em;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1em;
+    }
+    nav ul img{
+      width: 4em;
+      height: 4em;
+      padding: 0.2em;
+    }
+
+
+    .aboutMe{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 3fr, 2fr, 3fr, 2fr;
+
+      grid-template-areas: 
+        "jpg1"
+        "abo1"
+        "jpg2"
+        "abo2"
+        ;
+    }
+    #aboutMe1{    width: 15em;    height: 20em;  overflow: auto;}
+    #aboutMe2{    width: 15em;    height: 20em;  overflow: auto;}
+    #aboutMejpg1{ width: 15em;    height: 20em;}
+    #aboutMejpg2{ width: 15em;    height: 20em;}
+
+    footer{
+        height: 50vw;
+      }
+    }
