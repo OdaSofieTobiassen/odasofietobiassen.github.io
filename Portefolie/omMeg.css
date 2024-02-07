@@ -133,6 +133,8 @@ body {
 
     .aboutMe{
       display: grid;
+      margin-left: 20%;
+      margin-right: 20%;
       grid-template-columns: 1fr;
       grid-template-rows: 3fr, 2fr, 3fr, 2fr;
 
@@ -143,10 +145,10 @@ body {
         "abo2"
         ;
     }
-    #aboutMe1{    width: 15em;    height: 20em;  overflow: auto;}
-    #aboutMe2{    width: 15em;    height: 20em;  overflow: auto;}
-    #aboutMejpg1{ width: 15em;    height: 20em;}
-    #aboutMejpg2{ width: 15em;    height: 20em;}
+    #aboutMe1{    width: 100%;    height: 100%;}
+    #aboutMe2{    width: 100%;    height: 100%;}
+    #aboutMejpg1{ width: 100%;    height: 30em;}
+    #aboutMejpg2{ width: 100%;    height: 30em;}
 
     footer{
         height: 50vw;

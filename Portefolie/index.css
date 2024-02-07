@@ -13,7 +13,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1;
     background-color: rgb(64, 58, 58);
   }
@@ -55,8 +55,7 @@
     background-color: rgb(38, 36, 36);
     color: rgb(217, 212, 212);
     align-items: center;
-  }
-  #frontPage {
+ 
     display: flex;
     background-color: rgb(38, 36, 36);
     color: rgb(217, 212, 212);
@@ -176,6 +175,7 @@
         "jpg2 abo2"
         ;
   }
+  
   #aboutMe1{    grid-area: abo1;   background-color: rgb(230, 226, 226);    height: 23vw;   line-height: 1.5;   font-size: 1.1em;}
   #aboutMe2{    grid-area: abo2;   background-color: rgb(230, 226, 226);    height: 23vw;   line-height: 1.5;   font-size: 1.1em;}
   #aboutMejpg1{ grid-area: jpg1;   width: 19em;    height: 25em;   border-radius: 1em;     object-fit: cover;      overflow: hidden;}
@@ -219,19 +219,8 @@
    body{
       max-width: 100%;
     }
-
-    nav{
-      position: sticky;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      z-index: 1;
-      background-color: rgb(64, 58, 58);
-    }
+ 
     nav ul a{
-      width: 5em;
-      text-align: center;
-      font-family: 'Cormorant Garamond', serif;
       font-size: 1em;
     }
     nav ul img{
@@ -244,14 +233,14 @@
     #frontPage{
       display: grid;
       align-items: center;
+      height: 200vw;
       grid-template-areas: 
       "froT"
-      "froI"
-      ;
+      "froI";
     }
-    #textContainer {grid-area: froT; padding: 30px;}
-    #textContainer #helloText{font-size: 0.9em;}
-    #textContainer #nameText{font-size: 1.5em;}
+    #textContainer {grid-area: froT; padding: 20vw; height: 40vw;}
+    #textContainer #helloText{font-size: 1.5em;}
+    #textContainer #nameText{font-size: 3.5em;}
     #frontPage img {grid-area: froI;}
 
 
@@ -269,9 +258,10 @@
       margin-left: 3em;
     }
 
-    main{
-      border-top-left-radius: 0em;
-      border-top-right-radius: 0em;
+  
+    #mainPart{
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
 
 
@@ -304,6 +294,7 @@
 
     .aboutMe{
       display: grid;
+      
       grid-template-columns: 1fr;
       grid-template-rows: 3fr, 2fr, 3fr, 2fr;
 
@@ -314,12 +305,20 @@
         "abo2"
         ;
     }
-    #aboutMe1{    width: 15em;    height: 20em;  overflow: auto;}
-    #aboutMe2{    width: 15em;    height: 20em;  overflow: auto;}
-    #aboutMejpg1{ width: 15em;    height: 20em;}
-    #aboutMejpg2{ width: 15em;    height: 20em;}
+    #aboutMe1{    width: 100%;    height: 100%;}
+    #aboutMe2{    width: 100%;    height: 100%;}
+    #aboutMejpg1{ width: 100%;    height: 30em;}
+    #aboutMejpg2{ width: 100%;    height: 30em;}
 
     footer{
       height: 50vw;
     }
     }
+
+    /*
+
+
+    #aboutMe1{    width: 15em;    height: 20em;  overflow: auto;}
+    #aboutMe2{    width: 15em;    height: 20em;  overflow: auto;}
+    #aboutMejpg1{ width: 15em;    height: 20em;}
+    #aboutMejpg2{ width: 15em;    height: 20em;}
