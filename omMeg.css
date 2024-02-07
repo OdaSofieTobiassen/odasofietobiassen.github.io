@@ -57,7 +57,7 @@ body {
     margin-left: 10%;
     margin-right: 10%;
     gap: 2em;
-    row-gap: 7em;
+    row-gap: 10em;
     margin-bottom: 10em;
   
     grid-template-areas: 
@@ -71,7 +71,7 @@ body {
   #aboutMeOverskrift{ grid-area: aboO;   font-size: 3em;  text-align: center;   padding-top: 4em;} 
   #aboutMe1{          grid-area: abo1;   height: 100%;    line-height: 1.5;     font-size: 1.1em;       } 
   #aboutMe2{          grid-area: abo2;   height: 100%;    line-height: 1.5;     font-size: 1.1em;       width: 60%;}
-  #aboutMe3{          grid-area: abo3;   height: 100%;    line-height: 1.5;     font-size: 1.1em;       text-align: center;}
+  #aboutMe3{          grid-area: abo3;   height: 100%;    line-height: 1.5;     font-size: 1.1em;       text-align: center; padding-left: 23%;  padding-right: 23%;}
   #aboutMejpg1{       grid-area: jpg1;   width: 100%;     height: 100%;         object-fit: cover;      overflow: hidden;   border-top-left-radius: 1em;   border-bottom-left-radius: 1em;}
   #aboutMejpg2{       grid-area: jpg2;   width: 100%;     height: 100%;         object-fit: cover;      overflow: hidden;}
   #aboutMejpg3{       grid-area: jpg3;   width: 100%;     height: 100%;         object-fit: cover;      overflow: hidden;   border-top-right-radius: 1em;   border-bottom-right-radius: 1em;}
@@ -140,6 +140,7 @@ body {
       margin-left: 20%;
       margin-right: 20%;
       text-align: center;
+      row-gap: 2em;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(9, 1fr);
 
@@ -158,6 +159,7 @@ body {
 
     #aboutMe1{    width: 100%;    height: 100%;}
     #aboutMe2{    width: 100%;    height: 100%;}
+    #aboutMe3{    padding-left: 0;  padding-right: 0;}
     #aboutMejpg1{ display: none;}
     #aboutMejpg2{ width: 100%;    height: 30em;}
     #aboutMejpg3{ border-radius: 1em;}
