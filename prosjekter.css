@@ -1,0 +1,185 @@
+/*body*/
+body {
+    margin: 0;
+    overflow: auto;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: rgb(230, 226, 226);
+}
+
+
+
+/*nav*/
+  nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    background-color: rgb(64, 58, 58);
+  }
+  nav ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+  }
+  nav ul a{
+    color: #f8f9fa;
+    text-decoration: none;
+    width: 5em;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2em;
+  }
+  nav ul a:hover{
+    background-color: rgba(112, 106, 106, 0.543);
+    font-weight: bold;
+  }
+  nav ul img{
+    width: 5.5em;
+    height: 5.5em;
+    padding: 0.3em;
+    padding-right: 1em;
+  }
+  nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+/*Hovedgreia:)*/
+  .hobbies{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 2em;
+    align-items: center;
+    padding-top: 8em;
+    padding-bottom: 10em;
+    line-height: 1.3;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+  
+    grid-template-areas: 
+        "titl titl"
+        "food fooT"
+        "acti actT"
+        "movi movT"
+        ;
+  }
+  #title{           grid-area: titl;    font-size: 1.8em; text-align: center;}
+  #food{            grid-area: food;    height: 15em;}
+  #foodText{        grid-area: fooT;    padding-left: 3em;}
+  #activities{      grid-area: acti;    height: 15em;}
+  #activitiesText{  grid-area: actT;    padding-left: 3em;}
+  #movies{          grid-area: movi;    height: 15em;}
+  #moviesText{      grid-area: movT;    padding-left: 3em;}
+  #food img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+  }
+  #activities img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+  }
+  #movies img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+  }
+  .hobbies a{
+    color: black;
+  }
+  .hobbies a:hover{
+    color: rgb(87, 28, 142);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+
+/*footer*/
+  footer{
+    background-color: rgb(64, 58, 58);
+    height: 15vw;
+    padding-top: 2em;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  footer #kontaktinfo{
+    font-size: 1.5em;
+  }
+  footer div{
+    line-height: 1.7;
+    font-size: 1.2em;
+}
+
+
+
+
+/*telefonversjon*/
+  @media(orientation: portrait){
+
+   body{
+      max-width: 100%;
+    }
+
+    nav{
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      z-index: 1;
+      background-color: rgb(64, 58, 58);
+    }
+    nav ul a{
+      width: 5em;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1em;
+    }
+    nav ul img{
+      width: 4em;
+      height: 4em;
+      padding: 0.2em;
+    }
+
+
+    .hobbies{
+      text-align: center;
+      padding-bottom: 1em;
+      row-gap: 0em;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, 1fr);
+  
+      grid-template-areas: 
+        "titl"
+        "food"
+        "fooT"
+        "acti" 
+        "actT"
+        "movi"
+        "movT"
+        ;
+    } 
+    #title{           padding-top: 2em; padding-bottom: 5em;}
+    #food{            height: 10em;     border-radius: 1em;}
+    #foodText{        grid-area: fooT;  padding-left: 0em;}
+    #activities{      height: 10em;     border-radius: 1em;}
+    #activitiesText{  grid-area: actT;  padding-left: 0em;}
+    #movies{          height: 10em;     border-radius: 1em;}
+    #moviesText{      grid-area: movT;  padding-left: 0em;}
+
+    footer{
+      height: 50vw;
+    }
+
+}
